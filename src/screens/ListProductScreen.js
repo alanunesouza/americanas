@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Button, FlatList, Image} from 'react-native';
+import {StyleSheet, Text, View, Dimensions, FlatList, Image, ScrollView} from 'react-native';
 
 export default class ListProductScreen extends Component {
 
@@ -13,6 +13,7 @@ export default class ListProductScreen extends Component {
       <View>
         <FlatList
           data={this.props.products}
+          contentContainerStyle={{paddingBottom: 200}}
           renderItem={
             ({item}) =>
             <View style={styles.items}>
